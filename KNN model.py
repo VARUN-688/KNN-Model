@@ -1,15 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
 
 import numpy as np
 from typing import Tuple,Dict
 import pandas as pd
 
-
-# In[2]:
 
 
 def get_distance(x:Tuple[int,int],y:Tuple[int,int])->float:
@@ -17,8 +10,6 @@ def get_distance(x:Tuple[int,int],y:Tuple[int,int])->float:
     y_diff=(y[1]-x[1])**2
     return np.sqrt(x_diff+y_diff)
 
-
-# In[3]:
 
 
 class KNN:
@@ -61,15 +52,11 @@ class KNN:
         return self.get_label()
         
 
-    
 
-
-# In[4]:
 
 
 import random
 
-# Sample data for training
 random.seed(42)  # For reproducibility
 n_points = 50
 data = {
@@ -78,13 +65,10 @@ data = {
     'label': [random.choice(['A', 'B', 'C']) for _ in range(n_points)]
 }
 
-# Create an instance of the KNN class
 knn = KNN(dic=data, k=5)
 
-# Test point outside the training data
 test_point = (110, 110)
 
-# Predict the label for the test point
 predicted_label = knn.predict(test_point)
 print(f'The predicted label for the test point {test_point} is {predicted_label}')
 
