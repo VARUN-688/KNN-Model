@@ -12,7 +12,7 @@ This repository contains an implementation of the K-Nearest Neighbors (KNN) algo
 1. **Installation**: Clone the repository to your local machine.
 
     ```bash
-    git clone <repository_URL>
+    git clone <https://github.com/VARUN-688/KNN-Model>
     cd KNN-Model
     ```
 
